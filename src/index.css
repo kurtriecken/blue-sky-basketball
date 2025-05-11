@@ -1,0 +1,123 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif; /* Google font for clean, modern typography */
+  background-color: #f9fafb; /* Light background color */
+  color: #333; /* Dark text for better readability */
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif; /* Use a more dynamic font for headings */
+}
+
+/* index.css - Global Styles */
+body {
+  background: linear-gradient(135deg, #B3D9FF 0%, #E6F2FF 100%); /* Soft blue gradient */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #1E3A8A; /* Dark blue for headings */
+}
+
+a {
+  color: #1E40AF; /* Blue color for links */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #1D4ED8; /* Lighter blue on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+main {
+  background-color: #FFFFFF; /* White background for the main content */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* footer */
+footer {
+  background-color: #1E40AF;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Card or Section Style */
+.card {
+  background-color: #F8FAFC;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Light blue for the header */
+header {
+  background: #1E3A8A;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Style for Navbar items */
+.navbar a {
+  padding: 12px 16px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.active {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #1E3A8A;
+  padding: 20px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
