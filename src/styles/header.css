@@ -4,14 +4,18 @@
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+
+  h1 {
+    color: white;
+  }
 }
 
 .header img {
   transition: transform 0.3s ease;
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
 }
 
 .header .title {
@@ -62,7 +66,7 @@
 .mobile-menu {
   position: absolute;
   top: 4rem; /* Adjust as needed below the header */
-  right: 1rem; /* Position it near the right edge */
+  left: 3rem; /* Position it near the right edge */
   background-color: #1e3a8a; /* Tailwind's blue-900 */
   padding: 1rem;
   border-radius: 0.5rem;

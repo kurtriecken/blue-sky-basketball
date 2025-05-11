@@ -9,6 +9,7 @@ import Equipment from './pages/Equipment';
 import About from './pages/About';
 import Recommendations from './pages/Recommendations';
 import Videos from './pages/Videos.tsx'
+import Links from './pages/Links.tsx';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route path="/equipment" element={<Equipment />} />
         <Route path="/about" element={<About />} />
         <Route path="/recommendations" element={<Recommendations />} />
-        <Route path="/videos" element={<Videos />} /> {/* Add route */}
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/links" element={<Links />} />
       </Routes>
     </Layout>
   );

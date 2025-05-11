@@ -1,17 +1,18 @@
-import { Link } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
-import '/src/styles/header.css';
+import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import "/src/styles/header.css";
 
 const navLinks = [
-  { path: '/', label: 'Home' },
-  { path: '/teach', label: 'Teach' },
-  { path: '/shooting', label: 'Shooting' },
-  { path: '/mental', label: 'Mental' },
-  { path: '/skills', label: 'Skills' },
-  { path: '/equipment', label: 'Equipment' },
-  { path: '/about', label: 'About' },
-  { path: '/recommendations', label: "Do's & Don'ts" },
-  { path: '/videos', label: 'Videos' }, // Added video link
+  { path: "/", label: "Home" },
+  { path: "/teach", label: "Teach" },
+  { path: "/shooting", label: "Shooting" },
+  { path: "/mental", label: "Mental" },
+  { path: "/skills", label: "Skills" },
+  { path: "/equipment", label: "Equipment" },
+  { path: "/recommendations", label: "Do's & Don'ts" },
+  { path: "/videos", label: "Videos" },
+  { path: "/links", label: "Links"},
+  { path: "/about", label: "About" },
 ];
 
 export default function Header() {
@@ -23,16 +24,18 @@ export default function Header() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        menuRef.current && !menuRef.current.contains(event.target as Node) &&
-        hamburgerRef.current && !hamburgerRef.current.contains(event.target as Node)
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(event.target as Node)
       ) {
         setMenuOpen(false);
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
@@ -40,14 +43,6 @@ export default function Header() {
     <header className="header bg-blue-900 text-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center relative">
         {/* Basketball Image with Clouds */}
-        <div className="flex items-center">
-          <img
-            src="/assets/basketball-cloud.webp" // This should be in your public/assets folder
-            alt="Basketball with Clouds"
-            className="w-16 h-16 mr-4 rounded-full"
-          />
-          <h1 className="text-2xl font-bold">Blue Sky Basketball</h1>
-        </div>
 
         {/* Hamburger Icon */}
         <div
@@ -63,7 +58,7 @@ export default function Header() {
         {/* Mobile Menu */}
         <nav
           ref={menuRef}
-          className={`mobile-menu ${menuOpen ? 'active' : ''}`}
+          className={`mobile-menu ${menuOpen ? "active" : ""}`}
         >
           {navLinks.map((link) => (
             <Link
@@ -89,6 +84,11 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+
+        <div className="relative flex items-center">
+
+          <h1 className="text-3xl font-bold text-white z-10 relative">Blue Sky Basketball</h1>
+        </div>
       </div>
     </header>
   );
